@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="//code.jquery.com/jquery-1.11.1.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="gamescript.js"></script>
+<link rel="stylesheet" type="text/css" href="gamestyle.css" />
+
+<title>Chess</title>
+</head>
+<body>
+	<div id="gameboard">
+	<table>
+		<tr>
+			<td id='x0_y0' class="drop"></td>
+			<td id='x0_y1' class="drop"></td>
+			<td id='x0_y2' class="drop"></td>
+			<td id='x0_y3' class="drop"></td>
+			<td id='x0_y4' class="drop"></td>
+			<td id='x0_y5' class="drop"></td>
+			<td id='x0_y6' class="drop"></td>
+			<td id='x0_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x1_y0' class="drop"></td>
+			<td id='x1_y1' class="drop"></td>
+			<td id='x1_y2' class="drop"></td>
+			<td id='x1_y3' class="drop"></td>
+			<td id='x1_y4' class="drop"></td>
+			<td id='x1_y5' class="drop"></td>
+			<td id='x1_y6' class="drop"></td>
+			<td id='x1_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x2_y0' class="drop"></td>
+			<td id='x2_y1' class="drop"></td>
+			<td id='x2_y2' class="drop"></td>
+			<td id='x2_y3' class="drop"></td>
+			<td id='x2_y4' class="drop"></td>
+			<td id='x2_y5' class="drop"></td>
+			<td id='x2_y6' class="drop"></td>
+			<td id='x2_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x3_y0' class="drop"></td>
+			<td id='x3_y1' class="drop"></td>
+			<td id='x3_y2' class="drop"></td>
+			<td id='x3_y3' class="drop"></td>
+			<td id='x3_y4' class="drop"></td>
+			<td id='x3_y5' class="drop"></td>
+			<td id='x3_y6' class="drop"></td>
+			<td id='x3_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x4_y0' class="drop"></td>
+			<td id='x4_y1' class="drop"></td>
+			<td id='x4_y2' class="drop"></td>
+			<td id='x4_y3' class="drop"></td>
+			<td id='x4_y4' class="drop"></td>
+			<td id='x4_y5' class="drop"></td>
+			<td id='x4_y6' class="drop"></td>
+			<td id='x4_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x5_y0' class="drop"></td>
+			<td id='x5_y1' class="drop"></td>
+			<td id='x5_y2' class="drop"></td>
+			<td id='x5_y3' class="drop"></td>
+			<td id='x5_y4' class="drop"></td>
+			<td id='x5_y5' class="drop"></td>
+			<td id='x5_y6' class="drop"></td>
+			<td id='x5_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x6_y0' class="drop"></td>
+			<td id='x6_y1' class="drop"></td>
+			<td id='x6_y2' class="drop"></td>
+			<td id='x6_y3' class="drop"></td>
+			<td id='x6_y4' class="drop"></td>
+			<td id='x6_y5' class="drop"></td>
+			<td id='x6_y6' class="drop"></td>
+			<td id='x6_y7' class="drop"></td>
+		</tr>
+		<tr>
+			<td id='x7_y0' class="drop"></td>
+			<td id='x7_y1' class="drop"></td>
+			<td id='x7_y2' class="drop"></td>
+			<td id='x7_y3' class="drop"></td>
+			<td id='x7_y4' class="drop"></td>
+			<td id='x7_y5' class="drop"></td>
+			<td id='x7_y6' class="drop"></td>
+			<td id='x7_y7' class="drop"></td>
+		</tr>
+	</table>
+	</div>
+	<div id="stats">
+		<div id="whoToGo"></div>
+		<div id="gamestate"></div>
+		<h2>Last Move:</h2>
+		<div id="move"></div>
+	</div>
+</body>
+</html>
