@@ -38,6 +38,7 @@ public class ChessGame implements GameInterface {
 	public boolean isValid(Object mv) {
 		HashMap<String, Integer> moves = getMoves(mv);
 		int pieceFrom = board[moves.get("fromX")][moves.get("fromY")], pieceTo = board[moves.get("toX")][moves.get("toY")];
+		System.out.println(pieceFrom);
 		switch(pieceFrom){
 		// Case for ROOK movements
 		case 2: case 8:

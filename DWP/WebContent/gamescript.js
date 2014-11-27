@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	console.log(isMobile());
-	$.ajax({url:window.location.origin+"/DWP/"+'ChessGameServlet',
+	$.ajax({url:"/DWP/"+'ChessGameServlet',
 		type:'POST',
 		data:{begin:true},
 		success: function(data){
@@ -37,8 +37,6 @@ function fillBoard(gamestate) {
 		var y = i - (x * 8);
 		var ID = "x" + x + "_y" + y;
 		$("#" + ID).empty();
-		if ((Math.floor(i / 8) + (i % 8)) % 2 == 1)
-			$("#" + ID).addClass("dark");
 		if(isMobile())
 			$("#" + ID).addClass("mdrop");
 
@@ -110,7 +108,7 @@ function fillBoard(gamestate) {
 function makeMove(sp,ep,whoToGo,board){
 	$("#move").html( "<p>"+sp +" -> "+ep+"</p>");
 	var move = [sp,ep];
-	$.ajax({url:window.location.origin+"/DWP/"+'ChessGameServlet', 
+	$.ajax({url:"/DWP/"+'ChessGameServlet', 
 			type:'POST', 						
 			data:{	move:JSON.stringify(move),
 					whoToGo:whoToGo,
