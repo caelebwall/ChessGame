@@ -1,0 +1,83 @@
+table {
+	margin: 20px;
+}
+
+#gameboard {
+	width:562px;
+	background-color:whiteSmoke;
+	border:2px groove gray;
+	margin:25px;
+	float:left;
+	cursor:pointer;
+}
+
+td {
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.drag {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 5px;
+	font: 2.3em bold;
+	background-color:none;
+}
+
+.dark {
+	background-color: silver;
+}
+
+#stats {
+	margin:25px;
+	width:500px;
+	float:left;
+	font-family:sans-serif;
+}
+
+#whoToGo{
+	font:bold 2em sans-serif;
+	text-transform:capitalize;
+}
+
+#gamestate td{
+	font:bold 20px monospace;
+	border:none;
+	width:25px;
+	height:25px;
+	text-align:center;
+	padding:2px;
+}
+
+#move {
+	margin-left:40px;
+	width:250px;
+	height:70px;
+	text-align:center;
+	border:2px ridge silver;
+	font:bold 25px monospace;
+}
+
+#timeout {
+	position:fixed;
+	top:200px;
+	left:400px;
+	height:220px;
+	width:300px;
+	background-color:white;
+	border:2px ridge red;
+	border-radius:45px;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:80px;
+	font: bold 25px sans-serif;
+	visibility:hidden;
+}
+
+.active{
+	background-color:lime;
+}

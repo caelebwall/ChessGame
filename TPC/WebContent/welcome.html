@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="//code.jquery.com/jquery-1.11.1.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="welcomescript.js"></script>
+<link rel="stylesheet" type="text/css" href="connectstyle.css" />
+<title>Welcome 2 Player Chess</title>
+</head>
+<body>
+<h1>WELCOME</h1>
+<form action="connect.html" >
+  Game ID:<input type="text" name="game" id="game" maxlength="5"><br>
+  Player Colour: <select name="play" id="play">
+  					<option value="white">white</option>
+ 					<option value="black">black</option>
+				</select><br/>
+  <input type="submit" value="Play Game"><br/>
+</form>
+<button id="newGame">New Game</button>
+<div id="error"></div>
+</body>
+</html>

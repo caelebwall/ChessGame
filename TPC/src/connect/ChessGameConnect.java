@@ -1,15 +1,15 @@
-package pup;
+package connect;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class ChessGame implements GameInterface {
+public class ChessGameConnect implements GameInterfaceConnect {
 
 	private int board[][];
 	private int whoToGo;
 
-	public ChessGame(Map<String, String[]> requestParams, Object request) {
+	public ChessGameConnect(Map<String, String[]> requestParams, Object request) {
 		if (requestParams.get("begin") != null) {
 			createGame();
 		} else {
@@ -17,7 +17,7 @@ public class ChessGame implements GameInterface {
 			whoToGo = Integer.parseInt(requestParams.get("whoToGo")[0]);
 		}
 	}
-	
+
 	@Override
 	public void makeMove(Object mv) {
 		HashMap<String, Integer> moves = getMoves(mv);
@@ -32,22 +32,31 @@ public class ChessGame implements GameInterface {
 		gameState.put("whoToGo", Integer.toString(whoToGo));
 		gameState.put("board", boardToString(board));
 		return toJSON(gameState);
+
 	}
 
 	@Override
 	public boolean isValid(Object mv) {
 		HashMap<String, Integer> moves = getMoves(mv);
-		int pieceFrom = board[moves.get("fromX")][moves.get("fromY")];
-		int pieceTo = board[moves.get("toX")][moves.get("toY")];
-		System.out.println("pieceFrom:" + pieceFrom);
-		System.out.println("WhoToGo:" + whoToGo);
-		//Reject if it is not your go
-		if ((pieceFrom>=7) != (whoToGo==1))
+		int pieceFrom = board[moves.get("fromX")][moves.get("fromY")], pieceTo = board[moves.get("toX")][moves.get("toY")];
+		switch(pieceFrom){
+		// Case for ROOK movements
+		case 2: case 8:
+			if(moves.get("fromX")==moves.get("toX")|moves.get("fromY")==moves.get("toY"))
+				if((pieceFrom > 6) ? pieceTo < 7 : (pieceTo > 6 |pieceTo == 0))
+					if(moves.get("fromX") == moves.get("toX"))
+						// Check East/West
+						return eastWest(moves.get("fromY"),moves.get("toY"), moves.get("fromX"));
+					else
+						// Check North/South	
+						return northSouth(moves.get("fromX"),moves.get("toX"), moves.get("fromY"));
+				else
+					return false;
 			return false;
-		//Reject if a piece has been taken and it is the same color
-		if (pieceTo!=0 && ((pieceFrom>=7)==(pieceTo>=7)))
-			return false;
-		return true;
+		default:
+			return true;
+	
+		}
 	}
 	
 	// Converts request board into int[][]
