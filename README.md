@@ -16,4 +16,8 @@ Getting started in the JKCC at Edinburgh Napier University. If you are on anothe
 ![04.png](https://bitbucket.org/repo/Rnb8bz/images/3691989143-04.png)
 * Open the Git perspective: Windows / Open Perspective / Other…
 ![06.png](https://bitbucket.org/repo/Rnb8bz/images/48450011-06.png)
-
+* Clone a Git repository at https://bitbucket.org/cs66/popupproject.git
+![08.png](https://bitbucket.org/repo/Rnb8bz/images/3596563849-08.png)![10.png](https://bitbucket.org/repo/Rnb8bz/images/2390898774-10.png)
+* Import the project by right clicking from this screen:
+![12.png](https://bitbucket.org/repo/Rnb8bz/images/2559199152-12.png)
+* 
